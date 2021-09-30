@@ -20,8 +20,13 @@ namespace k1_CodeFirst.Entities
 
 
         // Relations:
-        public int CategoryID { get; set; } // foreign key
+        public int? CategoryID { get; set; } // foreign key -- category id null geçilecekse eğer, int null alamaz; int? yazılır.<nullable int> aynı şey.
         public Category Category { get; set; } //join yapmak için extra yazıldı. ilk satır yeterliydi
+
+        public int? SupplierID { get; set; } //bu sadece supplierID bilgisi ile bağlar
+        public Supplier Supplier { get; set; } //bu sayesinde tüm supplier tablosu olduğu gibi bağlanır. supplier nesnesi ile bağlanmış oluyor
+
+        public List<Order_Detail> Order_Details { get; set; }
 
         //yeni bir formda Product crud işlemlerini yaz (form ProductCrud)
     }

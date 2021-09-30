@@ -20,7 +20,7 @@ namespace k1_CodeFirst
 
         private void btnUrunListele_Click(object sender, EventArgs e)
         {
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
             List<Product> urunler = db.Products.ToList();
         }
 
@@ -34,7 +34,7 @@ namespace k1_CodeFirst
                 Discontinued = false
             };
 
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
             db.Products.Add(yeniUrun);
             var sonuc = db.SaveChanges();
 
@@ -47,7 +47,7 @@ namespace k1_CodeFirst
 
         private void btnUrunGuncelle_Click(object sender, EventArgs e)
         {
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
 
             Product guncellenecekkUrun = db.Products.FirstOrDefault(x => x.ProductName == "Apple");
 
@@ -65,7 +65,7 @@ namespace k1_CodeFirst
 
         private void btnUrunSilme_Click(object sender, EventArgs e)
         {
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
 
             var silinecekUrun = db.Products.FirstOrDefault(x => x.ProductID == 17);
 

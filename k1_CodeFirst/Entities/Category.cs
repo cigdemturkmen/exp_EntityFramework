@@ -21,5 +21,10 @@ namespace k1_CodeFirst.Entities
 
 
         public List<Product> Products { get; set; }
+
+        public override string ToString()
+        {
+            return CategoryName;
+        }
     }
 }

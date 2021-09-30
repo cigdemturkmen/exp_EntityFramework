@@ -35,7 +35,7 @@ namespace k1_CodeFirst
         // KATEGORİ LİSTELE
         private void btnTest_Click(object sender, EventArgs e)
         {
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
             List<Category> kategoriler = db.Categories.ToList();
 
             // Diğer tabloları da bağlayınız:
@@ -56,7 +56,7 @@ namespace k1_CodeFirst
                 Description = "İçecek ürünlerin bulunacağı bir kategori",
             };
 
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
             db.Categories.Add(yeniKategori);
             var sonuc = db.SaveChanges(); // bunu yazdığın an veritabanına kaydolur yapılan değişiklikler //sonuc int 1
 
@@ -70,7 +70,7 @@ namespace k1_CodeFirst
         private void btnKategoriGuncelle_Click(object sender, EventArgs e)
         {
             //kullanıcıdan alınan değerin uzunluğunun 15'den büyük olmasını engellemeniz lazım.
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
 
             Category guncellenecekKategori = db.Categories.FirstOrDefault(x => x.CategoryID == 5);
 
@@ -93,7 +93,7 @@ namespace k1_CodeFirst
         {
             // bir önceki adımda eklediğin kategoriyi sil
 
-            NorthwindDBContext db = new NorthwindDBContext();
+            NorthwindDbContext db = new NorthwindDbContext();
 
             var silinecekKategori = db.Categories.FirstOrDefault(x => x.CategoryID == 17);
 
