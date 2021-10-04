@@ -9,6 +9,8 @@ namespace k1_CodeFirst.Entities
 {
     public class Customer
     {
+        #region Properties
+
         [Required(ErrorMessage = "Bu alanın oluşturulması zorunludur.")]
         [MaxLength(5, ErrorMessage = "Oluşturulan ID 5 karakterli olmalıdır. ")]
         [MinLength(5, ErrorMessage = "Oluşturulan ID 5 karakterli olmalıdır.")]
@@ -23,5 +25,13 @@ namespace k1_CodeFirst.Entities
         public string Country { get; set; }
         public string Phone { get; set; }
         public string Fax { get; set; }
+
+        #endregion
+
+        #region Relations
+
+        public List<Order> Orders { get; set; }
+
+        #endregion
     }
 }

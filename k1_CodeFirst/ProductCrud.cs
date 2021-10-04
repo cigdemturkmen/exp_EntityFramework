@@ -21,6 +21,7 @@ namespace k1_CodeFirst
         private void btnUrunListele_Click(object sender, EventArgs e)
         {
             NorthwindDbContext db = new NorthwindDbContext();
+
             List<Product> urunler = db.Products.ToList();
         }
 
@@ -35,7 +36,9 @@ namespace k1_CodeFirst
             };
 
             NorthwindDbContext db = new NorthwindDbContext();
+
             db.Products.Add(yeniUrun);
+
             var sonuc = db.SaveChanges();
 
             if (sonuc > 0)
@@ -60,7 +63,6 @@ namespace k1_CodeFirst
                     MessageBox.Show("Güncelleme yapıldı.");
                 }
             }
-
         }
 
         private void btnUrunSilme_Click(object sender, EventArgs e)
@@ -73,13 +75,13 @@ namespace k1_CodeFirst
             if (silinecekUrun != null) // null check
             {
                 db.Products.Remove(silinecekUrun); // hard delete(uçurmak) - soft delete(IsActive columu bit(tipinde) 1den 0a dönüyor) biz soft tercih ediyoruz.
-                //silinecekUrun.Discontinued = false;  //soft delete. gerçekten bir şey silmez. truedan false dönüyor isactive.
+                //silinecekUrun.Discontinued = false;  //soft delete. gerçekten bir şey silmez. IsActive column'u truedan false dönüyor .
 
                 int sonuc = db.SaveChanges();
 
                 if (sonuc > 0)
                 {
-                    MessageBox.Show("Silme işlemi başarılı"); //relational olduğu için silmeyecek.
+                    MessageBox.Show("Silme işlemi başarılı"); //relational olduğu için silmeyecek. hata verecek.
                 }
             }
         }

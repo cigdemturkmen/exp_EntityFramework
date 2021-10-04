@@ -57,8 +57,10 @@ namespace k1_CodeFirst
             };
 
             NorthwindDbContext db = new NorthwindDbContext();
+
             db.Categories.Add(yeniKategori);
-            var sonuc = db.SaveChanges(); // bunu yazdığın an veritabanına kaydolur yapılan değişiklikler //sonuc int 1
+
+            var sonuc = db.SaveChanges(); // bunu yazdığın an veritabanına kaydolur yapılan değişiklikler //sonuc 1 döner(1 satır etkilendi)
 
             if (sonuc > 0)
             {
@@ -69,7 +71,7 @@ namespace k1_CodeFirst
         // KATEGORİ GÜNCELLE
         private void btnKategoriGuncelle_Click(object sender, EventArgs e)
         {
-            //kullanıcıdan alınan değerin uzunluğunun 15'den büyük olmasını engellemeniz lazım.
+            //kullanıcıdan alınan değerin uzunluğunun 15'den büyük olmasını engellemeniz lazım. Attirbute olarak min max uzunlukları ekledik sınıfların içinde.
             NorthwindDbContext db = new NorthwindDbContext();
 
             Category guncellenecekKategori = db.Categories.FirstOrDefault(x => x.CategoryID == 5);
@@ -101,6 +103,7 @@ namespace k1_CodeFirst
             if (silinecekKategori != null) // null check
             {
                 db.Categories.Remove(silinecekKategori);
+
                 int sonuc = db.SaveChanges();
 
                 if (sonuc >0)
@@ -108,10 +111,6 @@ namespace k1_CodeFirst
                     MessageBox.Show("Silme işlemi başarılı");
                 }
             }
-
-
-
-
         }
     }
 }

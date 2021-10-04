@@ -21,6 +21,16 @@ namespace k1_CodeFirst.Entities
 
         public List<Order_Detail> Order_Details { get; set; }
 
+        public int CustomerID { get; set; }
+        public Customer Customer { get; set; }
+
+        //public int ShipVia { get; set; }
+        //public Shipper Shipper { get; set; } 
+
+        //public int EmployeeID { get; set; }
+        //public Employee Employee { get; set; }
+
+
         #endregion
     }
 }

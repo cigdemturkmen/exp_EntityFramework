@@ -13,6 +13,7 @@ namespace k1_CodeFirst
 {
     public partial class Form3 : Form
     {
+        /*********************** INCLUDE ILE JOIN YAPMA *****************************/
         public Form3()
         {
             InitializeComponent();
@@ -26,21 +27,23 @@ namespace k1_CodeFirst
 
             //var kategoriler = db.Categories.ToList();
 
-            var kategoriler = db.Categories.Include( x => x.Products).ToList();
+            var kategoriler = db.Categories
+                .Include(x => x.Products)
+                .ToList();
+
+
 
             //ürünleri listeleyelim
 
             //var urunler = db.Products.ToList();
 
-            // ürünler - kategoriler arasındaki ilşki 1-n olarak belirtilmişti. supplier-product 1-n
+            // ürünler - kategoriler arasındaki ilişki 1-n olarak belirtilmişti. supplier-product 1-n
             var urunler = db.Products
                 .Include(x => x.Category)
                 .Include(x => x.Supplier)
                 .ToList(); //include join yapıyor
 
             var tedarikciler = db.Suppliers.Include(x => x.Products).ToList();
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,10 +59,10 @@ namespace k1_CodeFirst
                 .Include(x => x.Product)
                 .ToList();
 
-            // entity framework bir ORM aracıdır. veri tabanıyla bağlantı kurulduğunda ordaki her şeyin burada nesne olarak tutulduğu bir sist
+            // entity framework bir ORM aracıdır. veri tabanıyla bağlantı kurulduğunda ordaki her şeyin burada nesne olarak tutulduğu bir sistem.
             // ORM : Object Relational Manager
-            // Dapper : buraya yazdığımız şeyler sql kodları oluyor. ama EF'de yazmadan çekebiliyorz
-            // Dapper'ın avantajı daha hızlı olması 
+            // Dapper : Dapper da Entity Framework gibi bir ORM. Dapper'da yazdığımız şeyler SQL kodları oluyor ama EF'de SQL kodları yazmadan çekebiliyoruz.
+            // Dapper'ın avantajı daha hızlı olması çünkü SQL sorguları direkt çalışıyor. EF'de olduğu gibi kodları sorgu cümlelerine çevirme işlemi yok.
         }
     }
 }

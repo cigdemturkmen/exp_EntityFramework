@@ -74,7 +74,6 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NorthwindDBContext.cs" />
     <Compile Include="ProductCrud.cs">
       <SubType>Form</SubType>

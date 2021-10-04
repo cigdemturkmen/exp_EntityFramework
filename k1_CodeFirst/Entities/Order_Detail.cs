@@ -11,7 +11,7 @@ namespace k1_CodeFirst.Entities
     [Table("Order Details")] // veri tabanında görünecek isim bu 
     public class Order_Detail // ama ben bu ismi kullanacağım
     {
-        [Key]// ara tabloda hangisinin key olduğunu anlamak için key koyuyoruz.// max length min length vs validaston için yapılır. table'ler ve key'ler
+        [Key]// ara tabloda hangisinin key olduğunu anlamak için key attiribute'ü ekliyoruz.// max length min length vs validaston için yapılır. table'ler ve key'ler
              // 
         [Column(Order = 0)]
         public int OrderID { get; set; }
@@ -24,10 +24,13 @@ namespace k1_CodeFirst.Entities
         public short Quantity { get; set; } //smallint
         public float Discount { get; set; } //real
 
-        // tinyint - byte
+        //     SQL  -  C#
+        // tinyint  - byte
         // smallint - short
-        // int - int
-        // bigint - long
-        // money - decimal
+        //      int - int
+        //   bigint - long
+        //    money - decimal
+        //    img   - byte[]
+        
     }
 }
