@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BolumEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BolumEkle.Designer.cs">
+      <DependentUpon>BolumEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EgitmenEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgitmenEkle.Designer.cs">
+      <DependentUpon>EgitmenEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Base.cs" />
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Entities\DepartmentLecture.cs" />
@@ -64,6 +76,12 @@
     <Compile Include="Entities\Lecture.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\StudentLecture.cs" />
+    <Compile Include="FakulteEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FakulteEkle.Designer.cs">
+      <DependentUpon>FakulteEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,12 +92,40 @@
     <Compile Include="Migrations\202110031716218_Init.designer.cs">
       <DependentUpon>202110031716218_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110040742072_TCAddedToStudent.cs" />
+    <Compile Include="Migrations\202110040742072_TCAddedToStudent.designer.cs">
+      <DependentUpon>202110040742072_TCAddedToStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OBSDbContext.cs" />
+    <Compile Include="OgrenciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciEkle.Designer.cs">
+      <DependentUpon>OgrenciEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BolumEkle.resx">
+      <DependentUpon>BolumEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgitmenEkle.resx">
+      <DependentUpon>EgitmenEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakulteEkle.resx">
+      <DependentUpon>FakulteEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110031716218_Init.resx">
       <DependentUpon>202110031716218_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110040742072_TCAddedToStudent.resx">
+      <DependentUpon>202110040742072_TCAddedToStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciEkle.resx">
+      <DependentUpon>OgrenciEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

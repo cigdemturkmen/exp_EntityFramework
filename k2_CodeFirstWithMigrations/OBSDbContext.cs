@@ -12,9 +12,9 @@ namespace k2_CodeFirstWithMigrations
     {
         public OBSDbContext()
         {
-            this.Database.Connection.ConnectionString = "Server=.;Database= OBSDb;User Id=sa;Password=Password1;";
+            //this.Database.Connection.ConnectionString = "Server=.;Database= OBSDb;User Id=sa;Password=Password1;";
 
-            //this.Database.Connection.ConnectionString = "Server=.;Database= OBSDb;User Id=sa;Password=123";
+            this.Database.Connection.ConnectionString = "Server=.;Database= OBSDb;User Id=sa;Password=123";
         }
 
         public DbSet<Student> Students { get; set; }

@@ -23,7 +23,15 @@ namespace k2_CodeFirstWithMigrations.Entities
 
         public List<Student> Students { get; set; }
 
-        public List<DepartmentLecture> DepartmentLectures  { get; set; } 
+        public List<DepartmentLecture> DepartmentLectures  { get; set; }
+        #endregion
+
+        #region Methods
+
+        public override string ToString()
+        {
+            return $"{this.DepartmentName}";
+        }
         #endregion
     }
 }

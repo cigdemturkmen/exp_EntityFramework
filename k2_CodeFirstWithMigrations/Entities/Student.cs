@@ -12,6 +12,7 @@ namespace k2_CodeFirstWithMigrations.Entities
 
         public int StudentID { get; set; }
         public string StudentNumber { get; set; }
+        public string TCKN { get; set; }
 
         #endregion
 

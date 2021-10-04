@@ -17,9 +17,15 @@ namespace k2_CodeFirstWithMigrations.Entities
 
         #region Relations
 
-        public List<Department> Departments { get; set; } 
+        public List<Department> Departments { get; set; }
 
         #endregion
 
+        #region Methods
+        public override string ToString()
+        {
+            return this.FacultyName;
+        }
+        #endregion
     }
 }

@@ -21,5 +21,13 @@ namespace k2_CodeFirstWithMigrations.Entities
 
         #endregion
 
+        #region Methods
+
+        public override string ToString()
+        {
+            return $"{this.Name} {this.Surname}";
+        }
+        #endregion
+
     }
 }
