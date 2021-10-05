@@ -26,5 +26,13 @@ namespace k2_CodeFirstWithMigrations.Entities
 
         #endregion
 
+        #region Methods
+
+        public override string ToString()
+        {
+            return $"{this.LectureCode} {this.LectureName}";
+        }
+        #endregion
+
     }
 }

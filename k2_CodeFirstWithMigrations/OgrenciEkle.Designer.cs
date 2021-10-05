@@ -46,11 +46,15 @@ namespace k2_CodeFirstWithMigrations
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtTelefon = new System.Windows.Forms.TextBox();
             this.txtAdres = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.clbOgrencininDersleri = new System.Windows.Forms.CheckedListBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbFakulte = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(172, 323);
+            this.btnKaydet.Location = new System.Drawing.Point(172, 372);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(75, 23);
             this.btnKaydet.TabIndex = 0;
@@ -97,7 +101,7 @@ namespace k2_CodeFirstWithMigrations
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 158);
+            this.label5.Location = new System.Drawing.Point(56, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 5;
@@ -106,7 +110,7 @@ namespace k2_CodeFirstWithMigrations
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 185);
+            this.label6.Location = new System.Drawing.Point(38, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 6;
@@ -115,7 +119,7 @@ namespace k2_CodeFirstWithMigrations
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(58, 238);
+            this.label7.Location = new System.Drawing.Point(58, 287);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 7;
@@ -124,7 +128,7 @@ namespace k2_CodeFirstWithMigrations
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(49, 210);
+            this.label8.Location = new System.Drawing.Point(49, 259);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 8;
@@ -133,7 +137,7 @@ namespace k2_CodeFirstWithMigrations
             // cmbDanisman
             // 
             this.cmbDanisman.FormattingEnabled = true;
-            this.cmbDanisman.Location = new System.Drawing.Point(126, 182);
+            this.cmbDanisman.Location = new System.Drawing.Point(126, 231);
             this.cmbDanisman.Name = "cmbDanisman";
             this.cmbDanisman.Size = new System.Drawing.Size(121, 21);
             this.cmbDanisman.TabIndex = 9;
@@ -141,10 +145,11 @@ namespace k2_CodeFirstWithMigrations
             // cmbBolum
             // 
             this.cmbBolum.FormattingEnabled = true;
-            this.cmbBolum.Location = new System.Drawing.Point(126, 155);
+            this.cmbBolum.Location = new System.Drawing.Point(126, 204);
             this.cmbBolum.Name = "cmbBolum";
             this.cmbBolum.Size = new System.Drawing.Size(121, 21);
             this.cmbBolum.TabIndex = 10;
+            this.cmbBolum.SelectedIndexChanged += new System.EventHandler(this.cmbBolum_SelectedIndexChanged);
             // 
             // mtxtTCKN
             // 
@@ -177,24 +182,63 @@ namespace k2_CodeFirstWithMigrations
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(126, 207);
+            this.txtTelefon.Location = new System.Drawing.Point(126, 256);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(121, 20);
             this.txtTelefon.TabIndex = 15;
             // 
             // txtAdres
             // 
-            this.txtAdres.Location = new System.Drawing.Point(126, 235);
+            this.txtAdres.Location = new System.Drawing.Point(126, 284);
             this.txtAdres.Multiline = true;
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(121, 60);
             this.txtAdres.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(487, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Öğrencinin Dersleri";
+            // 
+            // clbOgrencininDersleri
+            // 
+            this.clbOgrencininDersleri.FormattingEnabled = true;
+            this.clbOgrencininDersleri.Location = new System.Drawing.Point(490, 103);
+            this.clbOgrencininDersleri.Name = "clbOgrencininDersleri";
+            this.clbOgrencininDersleri.Size = new System.Drawing.Size(271, 214);
+            this.clbOgrencininDersleri.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(49, 168);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 13);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Fakülte";
+            // 
+            // cmbFakulte
+            // 
+            this.cmbFakulte.FormattingEnabled = true;
+            this.cmbFakulte.Location = new System.Drawing.Point(125, 165);
+            this.cmbFakulte.Name = "cmbFakulte";
+            this.cmbFakulte.Size = new System.Drawing.Size(121, 21);
+            this.cmbFakulte.TabIndex = 20;
+            this.cmbFakulte.SelectedIndexChanged += new System.EventHandler(this.cmbFakulte_SelectedIndexChanged);
             // 
             // OgrenciEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbFakulte);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.clbOgrencininDersleri);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtAdres);
             this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.txtAd);
@@ -239,5 +283,9 @@ namespace k2_CodeFirstWithMigrations
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtTelefon;
         private System.Windows.Forms.TextBox txtAdres;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckedListBox clbOgrencininDersleri;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cmbFakulte;
     }
 }

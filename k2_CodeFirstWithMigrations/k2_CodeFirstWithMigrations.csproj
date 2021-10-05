@@ -62,6 +62,12 @@
     <Compile Include="BolumEkle.Designer.cs">
       <DependentUpon>BolumEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="DersEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DersEkle.Designer.cs">
+      <DependentUpon>DersEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="EgitmenEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202110031716218_Init.cs" />
     <Compile Include="Migrations\202110031716218_Init.designer.cs">
       <DependentUpon>202110031716218_Init.cs</DependentUpon>
@@ -109,6 +121,9 @@
     <EmbeddedResource Include="BolumEkle.resx">
       <DependentUpon>BolumEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DersEkle.resx">
+      <DependentUpon>DersEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EgitmenEkle.resx">
       <DependentUpon>EgitmenEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110031716218_Init.resx">
       <DependentUpon>202110031716218_Init.cs</DependentUpon>

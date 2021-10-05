@@ -34,11 +34,13 @@ namespace k2_CodeFirstWithMigrations
             this.txtBolumAdi = new System.Windows.Forms.TextBox();
             this.cmbFakulte = new System.Windows.Forms.ComboBox();
             this.lblFakulte = new System.Windows.Forms.Label();
+            this.cmbBolumAdi = new System.Windows.Forms.ComboBox();
+            this.clbDersler = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // btnBolumEkle
             // 
-            this.btnBolumEkle.Location = new System.Drawing.Point(115, 150);
+            this.btnBolumEkle.Location = new System.Drawing.Point(115, 262);
             this.btnBolumEkle.Name = "btnBolumEkle";
             this.btnBolumEkle.Size = new System.Drawing.Size(121, 23);
             this.btnBolumEkle.TabIndex = 0;
@@ -65,25 +67,44 @@ namespace k2_CodeFirstWithMigrations
             // cmbFakulte
             // 
             this.cmbFakulte.FormattingEnabled = true;
-            this.cmbFakulte.Location = new System.Drawing.Point(115, 102);
+            this.cmbFakulte.Location = new System.Drawing.Point(115, 6);
             this.cmbFakulte.Name = "cmbFakulte";
             this.cmbFakulte.Size = new System.Drawing.Size(121, 21);
             this.cmbFakulte.TabIndex = 3;
+            this.cmbFakulte.SelectedIndexChanged += new System.EventHandler(this.cmbFakulte_SelectedIndexChanged);
             // 
             // lblFakulte
             // 
             this.lblFakulte.AutoSize = true;
-            this.lblFakulte.Location = new System.Drawing.Point(53, 105);
+            this.lblFakulte.Location = new System.Drawing.Point(53, 9);
             this.lblFakulte.Name = "lblFakulte";
             this.lblFakulte.Size = new System.Drawing.Size(42, 13);
             this.lblFakulte.TabIndex = 4;
             this.lblFakulte.Text = "Fakülte";
             // 
+            // cmbBolumAdi
+            // 
+            this.cmbBolumAdi.FormattingEnabled = true;
+            this.cmbBolumAdi.Location = new System.Drawing.Point(253, 49);
+            this.cmbBolumAdi.Name = "cmbBolumAdi";
+            this.cmbBolumAdi.Size = new System.Drawing.Size(121, 21);
+            this.cmbBolumAdi.TabIndex = 5;
+            // 
+            // clbDersler
+            // 
+            this.clbDersler.FormattingEnabled = true;
+            this.clbDersler.Location = new System.Drawing.Point(115, 75);
+            this.clbDersler.Name = "clbDersler";
+            this.clbDersler.Size = new System.Drawing.Size(121, 169);
+            this.clbDersler.TabIndex = 6;
+            // 
             // BolumEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(591, 352);
+            this.Controls.Add(this.clbDersler);
+            this.Controls.Add(this.cmbBolumAdi);
             this.Controls.Add(this.lblFakulte);
             this.Controls.Add(this.cmbFakulte);
             this.Controls.Add(this.txtBolumAdi);
@@ -104,5 +125,7 @@ namespace k2_CodeFirstWithMigrations
         private System.Windows.Forms.TextBox txtBolumAdi;
         private System.Windows.Forms.ComboBox cmbFakulte;
         private System.Windows.Forms.Label lblFakulte;
+        private System.Windows.Forms.ComboBox cmbBolumAdi;
+        private System.Windows.Forms.CheckedListBox clbDersler;
     }
 }
