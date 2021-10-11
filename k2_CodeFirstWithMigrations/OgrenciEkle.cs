@@ -32,7 +32,7 @@ namespace k2_CodeFirstWithMigrations
             //    cmbDanisman.Items.Add(item);
             //}
 
-            //var bolumler = db.Departments.ToList();
+            //var bolumler = db.Departments.ToList(); // bolumler ilgili bu kısmı yoruma aldık çünkü, fakulte seçildikten sonra bolum comboboxı dolacak
 
             //cmbBolum.Items.AddRange(bolumler.ToArray());
 
