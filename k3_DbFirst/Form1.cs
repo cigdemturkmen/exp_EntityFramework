@@ -77,7 +77,7 @@ namespace k3_DbFirst
                     Name = x.FirstName,
                     Surname = x.LastName,
                     Birthdate = x.BirthDate,
-                    Age = (DbFunctions.DiffDays(x.BirthDate, DateTime.Now)) / 365
+                    Age = (DbFunctions.DiffDays(x.BirthDate, DateTime.Now)) / 365 //SqlFunctions.DateDiff
                 })
                 .ToList();
 
